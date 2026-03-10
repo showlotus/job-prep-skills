@@ -1,0 +1,164 @@
+# Job Prep Skills
+
+为 Claude AI 量身定制的求职技能集合，助力技术面试与简历优化。
+
+## 📚 Skills 列表
+
+### [Resume Optimizer](./resume-optimizer/) - 技术简历优化器 ✍️
+
+将平淡的技术工作描述改写为符合大厂标准的专业简历要点。
+
+**核心能力：**
+- 强动词开头，提升表达力度
+- 技术关键词优化，精准展示能力
+- STAR 法则应用（情境-任务-行动-结果）
+- 三种风格输出：标准专业版、数据驱动版、专家架构师版
+
+**使用示例：**
+```
+"帮我优化这段项目经历"
+"把这个技术描述改成简历语言"
+```
+
+**适用对象：** 后端/前端开发工程师、架构师、技术专家
+
+---
+
+### [Fresh Graduate Resume Optimizer](./fresh-graduate-resume-optimizer/) - 应届生简历优化器 🎓
+
+专为校招求职者设计，将校园经历、实习经历、项目经验转化为专业、有竞争力的简历描述。
+
+**核心能力：**
+- 强动词开头，提升表达力度
+- 量化成果展示（支持占位符提示）
+- STAR 法则结构化描述
+- 三版本输出：基础版、进阶版、高阶版
+- 六大模块覆盖：教育背景、实习经历、项目经验、技能证书、校园活动、竞赛获奖
+
+**使用示例：**
+```
+"帮我优化这段实习经历"
+"把这个课程项目改成简历语言"
+"优化我的社团活动描述"
+```
+
+**适用对象：** 准备校招的应届毕业生
+
+---
+
+### [Frontend Project Interview](./frontend-project-interview/) - 前端项目面试官 🎤
+
+互联网大厂前端面试官角色，针对简历中的项目/工作经历进行阶梯式技术深挖，支持**辅导模式**提供实时反馈和改进建议。
+
+**核心能力：**
+- 简历分析与技术点识别
+- 六级阶梯式提问（从项目背景到架构视野）
+- 两种面试模式：严格面试模式 / 辅导模式（推荐）
+- 动态追问技巧（根据回答质量调整深度）
+- 实时反馈与优化建议
+- 综合评价与提升路径
+
+**使用示例：**
+```
+"帮我模拟一下前端面试"
+"根据我的简历进行技术深挖"
+"我想练习一下项目经历相关的面试题"
+```
+
+**适用对象：** 准备前端面试的开发者
+
+---
+
+### [Frontend Knowledge Interview](./frontend-knowledge-interview/) - 前端知识点面试官 📖
+
+互联网大厂前端面试官，提供阶梯式技术提问、实时反馈和改进建议。覆盖 11 个技术分组、40+ 具体方向、三级难度。
+
+**核心能力：**
+- 11 大技术分组：基础、浏览器与网络、框架与原理、工程化、性能优化、安全、移动端、架构与设计、算法、Node.js、其他
+- 40+ 具体技术方向：Vue、React、TypeScript、Webpack、微前端等
+- 三级难度：初级（基础概念）、中级（原理理解）、高级（源码级）
+- 专业评价与补充说明
+- 持续面试模式
+
+**使用示例：**
+```
+"我想练习 Vue 的面试题"
+"考考我 React 原理相关的问题"
+"帮我检验一下 JavaScript 基础"
+```
+
+**适用对象：** 想要系统性检验前端技术掌握程度的开发者
+
+---
+
+## 🚀 安装
+
+### 使用 skills CLI（推荐）
+
+```bash
+# 列出所有可用的 skills
+npx skills add showlotus/job-prep-skills --list
+
+# 安装特定 skill
+npx skills add showlotus/job-prep-skills --skill resume-optimizer
+npx skills add showlotus/job-prep-skills --skill fresh-graduate-resume-optimizer
+npx skills add showlotus/job-prep-skills --skill frontend-project-interview
+npx skills add showlotus/job-prep-skills --skill frontend-knowledge-interview
+
+# 安装所有 skills
+npx skills add showlotus/job-prep-skills --skill '*'
+
+# 指定安装到 Claude Code
+npx skills add showlotus/job-prep-skills --skill resume-optimizer -a claude-code
+
+# 全局安装（所有项目可用）
+npx skills add showlotus/job-prep-skills --skill resume-optimizer -g
+```
+
+### 手动安装
+
+```bash
+# 克隆仓库
+git clone https://github.com/showlotus/job-prep-skills
+
+# 复制到项目的 .claude/skills 目录
+cp -r job-prep-skills/resume-optimizer your-project/.claude/skills/
+cp -r job-prep-skills/fresh-graduate-resume-optimizer your-project/.claude/skills/
+cp -r job-prep-skills/frontend-project-interview your-project/.claude/skills/
+cp -r job-prep-skills/frontend-knowledge-interview your-project/.claude/skills/
+```
+
+---
+
+## 📁 项目结构
+
+```
+job-prep-skills/
+├── README.md
+├── resume-optimizer/                 # 简历优化工具
+│   ├── SKILL.md
+│   ├── README.md
+│   └── references/
+│       ├── examples.md               # 优秀案例库
+│       └── strong-verbs.md           # 强动词库
+├── fresh-graduate-resume-optimizer/  # 应届生简历优化工具
+│   ├── SKILL.md
+│   └── references/
+│       ├── campus-keywords.md        # 校园经历关键词库
+│       ├── examples.md               # 优秀案例库
+│       └── strong-verbs.md           # 强动词库
+├── frontend-knowledge-interview/     # 前端知识点面试官
+│   └── SKILL.md
+└── frontend-project-interview/       # 前端项目面试官
+    ├── SKILL.md
+    └── references/
+        └── frontend-knowledge.md     # 前端知识点参考
+```
+
+---
+
+## 📖 资源
+
+- [Claude Skills 官方文档](https://www.anthropic.com/news/skills)
+- [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills) - 更多 skills 集合
+- [创建自定义 Skills 指南](https://support.claude.com/en/articles/12512198-creating-custom-skills)
