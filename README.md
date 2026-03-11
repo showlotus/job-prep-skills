@@ -91,7 +91,35 @@
 
 ---
 
-## 🚀 安装
+## 💬 在任意 AI 对话工具中使用
+
+每个技能目录下都有一个 `README.md` 文件，其中包含完整的提示词。你可以：
+
+1. 打开对应技能的 `README.md` 文件
+2. 复制 `---` 分隔线之后的代码块内容
+3. 粘贴到任意 AI 对话工具（如 ChatGPT、Claude 网页版、DeepSeek、千问、智谱清言等）
+4. AI 会自动扮演该技能角色，开始提供服务
+
+**示例：**
+```
+# 在 ChatGPT 中使用简历优化器
+1. 打开 resume-optimizer/README.md
+2. 复制分隔线后的完整提示词
+3. 发送给 ChatGPT
+4. 然后输入你的技术描述，即可获得优化后的简历要点
+```
+
+**支持的平台：**
+- ChatGPT
+- Claude 网页版
+- DeepSeek
+- 千问
+- 智谱清言
+- 任何支持长文本的 AI 对话工具
+
+---
+
+## 🚀 安装（Claude Code 专用）
 
 ### 使用 skills CLI（推荐）
 
@@ -136,24 +164,29 @@ cp -r job-prep-skills/frontend-knowledge-interview your-project/.claude/skills/
 job-prep-skills/
 ├── README.md
 ├── resume-optimizer/                 # 简历优化工具
-│   ├── SKILL.md
-│   ├── README.md
+│   ├── SKILL.md                      # Claude Code 专用指令
+│   ├── README.md                     # 通用 AI 对话提示词 ⭐
 │   └── references/
 │       ├── examples.md               # 优秀案例库
 │       └── strong-verbs.md           # 强动词库
 ├── fresh-graduate-resume-optimizer/  # 应届生简历优化工具
-│   ├── SKILL.md
+│   ├── SKILL.md                      # Claude Code 专用指令
+│   ├── README.md                     # 通用 AI 对话提示词 ⭐
 │   └── references/
 │       ├── campus-keywords.md        # 校园经历关键词库
 │       ├── examples.md               # 优秀案例库
 │       └── strong-verbs.md           # 强动词库
 ├── frontend-knowledge-interview/     # 前端知识点面试官
-│   └── SKILL.md
+│   ├── SKILL.md                      # Claude Code 专用指令
+│   └── README.md                     # 通用 AI 对话提示词 ⭐
 └── frontend-project-interview/       # 前端项目面试官
-    ├── SKILL.md
+    ├── SKILL.md                      # Claude Code 专用指令
+    ├── README.md                     # 通用 AI 对话提示词 ⭐
     └── references/
         └── frontend-knowledge.md     # 前端知识点参考
 ```
+
+> ⭐ `README.md` 文件包含完整的提示词，可在任意 AI 对话工具中直接使用
 
 ---
 
