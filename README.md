@@ -1,6 +1,6 @@
 # Job Prep Skills
 
-为 Claude AI 量身定制的求职技能集合，助力技术面试与简历优化。
+求职技能集合，助力技术面试与简历优化。
 
 ## 📚 Skills 列表
 
@@ -91,6 +91,28 @@
 
 ---
 
+### [Frontend Scenario Interview](./frontend-scenario-interview/) - 前端场景题面试官 🧩
+
+互联网大厂前端面试官，专注于主观场景题模拟面试，考察系统设计能力、问题解决思路和实战经验。
+
+**核心能力：**
+- 7 大场景类别：性能优化、架构设计、工程化、疑难问题排查、团队协作、AI 相关、职业发展
+- 2-3 轮阶梯式追问，逐步深入考察
+- 基于真实面经的场景题库
+- 多维度评分：问题分析、方案设计、技术深度、表达逻辑
+- 口语化回答示例与改进建议
+
+**使用示例：**
+```
+"帮我练习性能优化场景题"
+"我想做架构设计的场景面试"
+"随机出一道场景题练练"
+```
+
+**适用对象：** 准备前端面试，想提升场景题答题能力的开发者
+
+---
+
 ## 💬 在任意 AI 对话工具中使用
 
 每个技能目录下都有一个 `README.md` 文件，其中包含完整的提示词。你可以：
@@ -132,6 +154,7 @@ npx skills add showlotus/job-prep-skills --skill resume-optimizer
 npx skills add showlotus/job-prep-skills --skill fresh-graduate-resume-optimizer
 npx skills add showlotus/job-prep-skills --skill frontend-project-interview
 npx skills add showlotus/job-prep-skills --skill frontend-knowledge-interview
+npx skills add showlotus/job-prep-skills --skill frontend-scenario-interview
 
 # 安装所有 skills
 npx skills add showlotus/job-prep-skills --skill '*'
@@ -154,6 +177,7 @@ cp -r job-prep-skills/resume-optimizer your-project/.claude/skills/
 cp -r job-prep-skills/fresh-graduate-resume-optimizer your-project/.claude/skills/
 cp -r job-prep-skills/frontend-project-interview your-project/.claude/skills/
 cp -r job-prep-skills/frontend-knowledge-interview your-project/.claude/skills/
+cp -r job-prep-skills/frontend-scenario-interview your-project/.claude/skills/
 ```
 
 ---
@@ -179,11 +203,14 @@ job-prep-skills/
 ├── frontend-knowledge-interview/     # 前端知识点面试官
 │   ├── SKILL.md                      # Claude Code 专用指令
 │   └── README.md                     # 通用 AI 对话提示词 ⭐
-└── frontend-project-interview/       # 前端项目面试官
+├── frontend-project-interview/       # 前端项目面试官
+│   ├── SKILL.md                      # Claude Code 专用指令
+│   ├── README.md                     # 通用 AI 对话提示词 ⭐
+│   └── references/
+│       └── frontend-knowledge.md     # 前端知识点参考
+└── frontend-scenario-interview/      # 前端场景题面试官
     ├── SKILL.md                      # Claude Code 专用指令
-    ├── README.md                     # 通用 AI 对话提示词 ⭐
-    └── references/
-        └── frontend-knowledge.md     # 前端知识点参考
+    └── README.md                     # 通用 AI 对话提示词 ⭐
 ```
 
 > ⭐ `README.md` 文件包含完整的提示词，可在任意 AI 对话工具中直接使用
